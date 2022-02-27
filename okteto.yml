@@ -1,0 +1,13 @@
+name: react-getting-started
+autocreate: true
+image:
+  name: okteto.dev/react-getting-started:dev
+  context: .
+  target: dev
+command: bash
+forward:
+  - 8080:8080
+sync:
+  - .:/usr/src/app
+persistentVolume:
+  enabled: false
