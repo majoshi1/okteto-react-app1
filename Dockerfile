@@ -1,6 +1,6 @@
-FROM okteto/node:10 as dev
+FROM okteto/node:14 as dev
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
+COPY package.json ./
 RUN yarn install 
 
 FROM dev as build
